@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="shortcut icon" href="/images/sample image.JPG" type="image/x-icon">
+    <style>
+    :root {
+    --primary: #2a2a2a;
+    --secondary: #f5f5f5;
+    --accent: #d4af37;
+    --text: #333;
+    --light: #fff;
+    --font-main: 'Helvetica Neue', sans-serif;
+    --font-heading: 'Georgia', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: rgba(295, 255, 255, 0.95);
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--accent);
+
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+
+}
+
+
+.hero {
+    /* height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('');
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light);
+    padding: 0 2rem; */
+
+    position: relative;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    
+    margin-top: 70px;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    will-change: all;
+}
+
+.slide {
+    min-width: 100%;
+    /* position: relative; */
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(295, 255, 255, 0.95);
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+
+.indicator.active {
+    background: white;
+}
+
+.hero-content {
+    /* max-width: 800px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    z-index: 10;
+    padding-top: 100px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary);
+    padding: 0.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid var(--accent);
+
+}
+
+.btn:hover {
+    background: transparent;
+    color: purple;
+}
+
+/* .carousel-controls {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 10;
+
+}
+
+.hero-carousel {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slides {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.carousel-slide {
+    /* min-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--light);
+    position: relative; */
+
+    /* flex: 0 0 100%;
+    height: 199%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 1px;
+    position: relative;
+} */
+
+/*.carousel-slide::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+} */
+
+
+.collections {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: var(--secondary);
+}
+
+.section-title1 {
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    margin-bottom: 3rem;
+    color: var(--primary);
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:  2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.collection-items {
+    background: var(--light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.collection-items:hover {
+    transform:translatex(-7px);
+
+}
+
+.collection-details {
+    padding: 1.3rem;
+}
+
+.collection-details h3 {
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.about {
+    padding: 5rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* text-align: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-content {
+    grid-column: 1;
+}
+
+.about h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1.5renm;
+}
+
+.about p {
+    font-size: 1.1rem; 
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.owner-image {
+    /* flex: 1; */
+    grid-column: 2;
+    width: 100%;
+    margin-left: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.owner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform o.3s ease;
+}
+.owner-image:hover img {
+    transform: scale(1.03s);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    bottom: -10px;
+    left: 0;
+}
+
+#Contact {
+    background: var(--primary);
+    color: var(--light);
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minimax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h3 {
+    font: var(--font-heading);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: var(--accent);
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: var(--accent);
+}
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: var(--light);
+    font-size: 1rem;
+    transition: color 10s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+.copyright {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(295, 255, 255, 0.1);
+    font: 0.9rem;
+    opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+    .owner-image {
+        grid-column: 1;
+        margin: 2rem auto 0;
+    }
+    header {
+        padding: 1rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    nav ul li {
+        margin-left: 1rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .section-title1 {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 450px) {
+    nav ul {
+        display: none;
+    }
+    .hero h1 {
+        font: 2rem;
+    }
+
+    .hero p {
+        font: 1rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+    }
+}</style>
+    <title>Luna Appareal</title>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            LUNA's <span>Apparel</span>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li><a href="#collection">Collections</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <!-- <div class="hero-carousel">
+            <div class="carousel-slides">
+                <div class="carousel-slide" style="background-image: url('images/clothing.jpg');"><span>slide 1</span></div>
+                <div class="carousel-slide" style="background-image: url('images/lunas-apparel.JPG');"><span>slide 2</span></div>
+                <div class="carousel-slide" style="background-image: url('images/lunas-apparel.JPG');"><span>slide 3</span></div>
+            </div>
+            
+        </div> -->
+        
+        <div class="carousel">
+            <div class="slide">
+                <img src="./images/clothing.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./images/lunas-apparel.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./images/sample 2.JPG" alt="">
+            </div>
+        </div>
+
+
+        <div class="hero-content">
+            <h1>
+                Elevate Your Everyday
+            </h1>
+            <p>Discover timeless pieces crafted with care for the modern individual. Sustainability materials, exceptional quality</p>
+
+            <a href="#collections" class="btn">Shop Now</a>
+        </div>
+
+        <div class="carousel-controls">
+                <div class="indicator active"></div>
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+            </div>
+
+    </section>
+
+    <section class="collections" id="collections">
+        <h2 class="section-title1">
+            Our Collections
+        </h2>
+        <div class="collections-grid">
+            <div class="collection-items">
+                <div class="collection-img" style="background-image: url(/);"></div>
+                <div class="collection-details">
+                    <h3>Essential Lines</h3>
+                    <p>Everyday basics redefined</p>
+                </div>
+            </div>
+            <div class="collection-items">
+                <div class="collection-img" style="background-image: ;"></div>
+                <div class="collection-details">
+                    <h3>Premium Selection</h3>
+                    <P>Luxurious fabrics & finishes</P>
+                </div>
+            </div>
+            <div class="collection-items">
+                <div class="collection-img" style="background-image: ;"></div>
+                <div class="collection-details">
+                    <h3>Seasonal Editions</h3>
+                    <p>Limited run designs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        
+        <h2 class="section-title">Our Philosophy</h2>
+        <div class="about-content">
+            <p>I'm the Founder of Luna's Apparel, a fashion brand from overcoming doubt
+            and chasing dreams. Luna's reflects my journey of 
+            growth, faith, and creativity, crafting unique and bold fashion that inspires courage
+        </p>
+        <p>Luna's was born from a desire to create clothing that
+            combines minimalist design with exceptional quality.
+            We believe in fewer, better pieces that stand the test of time.
+        </p>
+        </div>
+        <div class="owner-image">
+            <img src="./images/sample 2.JPG" alt="">
+        </div>
+    </section>
+    <footer id="Contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#about">Our story</a></li>
+                    <li><a href="#press">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <p>Sign up for our newsletter to recceive updates on our new collections and exclusive offers.</p>
+                <div class="social-links">
+                    <a href="#https://instagram.com" target="_blank">IG</a>
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://pinterest.com" target="_blank">Pinterest</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">&copy; 2025 LUNA Appareal. All rights reserved.</div>
+    </footer>
+
+    <script>
+        
+    </script>
+</body>
+</html>

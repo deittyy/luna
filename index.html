@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNA's Apparel | Premium Fashion Brand</title>
+    <link rel="shortcut icon" href="/images/sample image.JPG" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo"><i class="fas fa-moon"></i>LUNA's <span>Apparel</span></a>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video autoplay muted loop class="hero-video">
+            <source src="./images/video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Elevate Your Everyday Style</h1>
+            <p>Discover timeless pieces crafted with care for the modern individual. Sustainable materials, exceptional quality, and effortless elegance.</p>
+            <div class="btn-group">
+                <a href="#collections" class="btn">Shop Now</a>
+                <a href="#about" class="btn btn-outline">Our Story</a>
+            </div>
+        </div>
+        <a href="#collections" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="featured-collections" id="collections">
+        <h2 class="section-title">Our Collections</h2>
+        <p class="section-subtitle">Explore our carefully curated collections designed for every occasion</p>
+        
+        <div class="collections-carousel">
+            <div class="collections-slider">
+                <div class="collections-slide">
+                    <img src="./images/clothing.jpg" alt="Spring Collection">
+                    <div class="collections-slide-caption">
+                        <!-- <h3>Spring 2025 Collection</h3> -->
+                        <p>Lightweight fabrics and fresh colors for the new season</p>
+                    </div>
+                </div>
+                <div class="collections-slide">
+                    <img src="./images/Ankara Fabric.jpeg" alt="Summer Collection">
+                    <div class="collections-slide-caption">
+                        <!-- <h3>Summer Essentials</h3> -->
+                        <p>Breezy styles for warm days and cool nights</p>
+                    </div>
+                </div>
+                <div class="collections-slide">
+                    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Autumn Collection">
+                    <div class="collections-slide-caption">
+                        <!-- <h3>Autumn Vibes</h3> -->
+                        <p>Rich textures and warm tones</p>
+                    </div>
+                </div>
+                <div class="collections-slide">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Winter Collection">
+                    <div class="collections-slide-caption">
+                        <!-- <h3>Winter Warmth</h3> -->
+                        <p>Luxurious layers for all weather comfort</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collections-controls">
+                <button class="collections-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="collections-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="collections-indicators">
+                <div class="collections-indicator active"></div>
+                <div class="collections-indicator"></div>
+                <div class="collections-indicator"></div>
+                <div class="collections-indicator"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <h2 class="section-title">Shop By Category</h2>
+        <p class="section-subtitle">Find your perfect style across our diverse range of categories</p>
+        
+        <div class="categories-grid">
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80" alt="Women's Apparel">
+                <div class="category-overlay">
+                    <h3>Women's</h3>
+                    <p>Explore Collection</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Men's Apparel">
+                <div class="category-overlay">
+                    <h3>Men's</h3>
+                    <p>Explore Collection</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Accessories">
+                <div class="category-overlay">
+                    <h3>Accessories</h3>
+                    <p>Explore Collection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Our Philosophy</h2>
+                <p>Founded in 2020, LUNA's Apparel was born from a desire to create clothing that combines minimalist design with exceptional quality. We believe in fewer, better pieces that stand the test of time.</p>
+                <p>Each garment is thoughtfully designed with attention to detail, using sustainable materials and ethical production methods. Our mission is to provide timeless fashion that transcends trends.</p>
+                <p>I'm the Founder of Luna's Apparel, a fashion brand born from overcoming doubt and chasing dreams. Luna's reflects my journey of growth, faith, and creativity, crafting unique and bold fashion that inspires courage.</p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Sustainable</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="./images/sample 2.JPG" alt="About LUNA's Apparel">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-subtitle">Don't just take our word for it - hear from our community</p>
+        
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    The quality of LUNA's clothing is unmatched. I've had my favorite blazer for two years and it still looks brand new. Worth every penny!
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah J.">
+                    </div>
+                    <div class="author-info">
+                        <h4>Sarah J.</h4>
+                        <p>Loyal Customer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    As someone who values sustainable fashion, I appreciate LUNA's commitment to ethical production. Their pieces are staples in my wardrobe.
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T.">
+                    </div>
+                    <div class="author-info">
+                        <h4>Michael T.</h4>
+                        <p>Fashion Blogger</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    The fit and comfort of LUNA's clothing is exceptional. I always receive compliments when I wear their pieces. Highly recommend!
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma R.">
+                    </div>
+                    <div class="author-info">
+                        <h4>Emma R.</h4>
+                        <p>Stylist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>Join Our Community</h2>
+            <p>Subscribe to our newsletter for exclusive offers, styling tips, and early access to new collections.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-about">
+                <a href="#" class="footer-logo">LUNA's <span>Apparel</span></a>
+                <p>Elevating everyday style with timeless, sustainable fashion since 2020.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Customer Service</h3>
+                <ul>
+                    <!-- <li><a href="#">Shipping Policy</a></li> -->
+                    <!-- <li><a href="#">Returns & Exchanges</a></li> -->
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Block 1, Flat 5, Amina way, University of Ibadan</p>
+                <p><i class="fas fa-phone"></i> +234 7042483573</p>
+                <p><i class="fas fa-envelope"></i> hello@lunasapparel.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM </p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 LUNA's Apparel. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+        
+        // Collections Carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.collections-slider');
+            const slides = document.querySelectorAll('.collections-slide');
+            const prevBtn = document.querySelector('.collections-prev');
+            const nextBtn = document.querySelector('.collections-next');
+            const indicators = document.querySelectorAll('.collections-indicator');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+            let autoSlideInterval;
+            
+            function goToSlide(index) {
+                if (index < 0) {
+                    currentIndex = slideCount - 1;
+                } else if (index >= slideCount) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = index;
+                }
+                
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update indicators
+                indicators.forEach((indicator, i) => {
+                    if (i === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+            
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+            
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+            
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+            
+            // Button click events
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+            
+            // Indicator click events
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    goToSlide(index);
+                    stopAutoSlide();
+                    startAutoSlide();
+                });
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                    stopAutoSlide();
+                    startAutoSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                    stopAutoSlide();
+                    startAutoSlide();
+                }
+            });
+            
+            // Start auto sliding
+            startAutoSlide();
+            
+            // Pause on hover
+            const carousel = document.querySelector('.collections-carousel');
+            carousel.addEventListener('mouseenter', stopAutoSlide);
+            carousel.addEventListener('mouseleave', startAutoSlide);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
